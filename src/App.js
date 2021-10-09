@@ -5,25 +5,37 @@ import {
   Route,
 } from "react-router-dom";
 import Register from './Components/Registration/register';
-import CCHome from './Components/CC-Home/CC_Home';
+import Home from './Components/home/home';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <div>
           <Switch>
+       
+          {/* <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/users">Users</Link>
+              </li>
+            </ul>
+          </nav> */}
+
             <Route path="/register">
               <Register />
             </Route>
-            <Route path="/">
-              <CCHome />
-            </Route>
-            <Route path="*">
-              <CCHome />
-            </Route>
+            <Route path="/" component={Home} />
+             
+            <Route path="*" component={Home} />
+            
+            
           </Switch>
-        </div>
       </Router>      
     </div>
   );

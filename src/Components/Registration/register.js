@@ -27,7 +27,7 @@ function Register() {
     const [codechefid2error, setcodechefid2error] = useState();
 
     async function register(){
-      validateName()
+      if()
       
     }
 
