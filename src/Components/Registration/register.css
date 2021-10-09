@@ -1,0 +1,41 @@
+.register{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.registerform{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.member{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.title{
+    color: #ededed;
+    text-align: left;
+}
+
+.button{
+    background-color: #00009f;
+    color: #ededed;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    font-size: large;
+    border-radius: 4px;
+    padding: 6px 20px;
+}
