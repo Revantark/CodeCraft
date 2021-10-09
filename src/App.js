@@ -4,18 +4,19 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+
 } from "react-router-dom";
 import Register from './Components/Registration/register';
-import CCHome from './Components/CC-Home/CC_Home';
+import Home from './Components/home/home';
 
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <div>
-          <nav>
+          <Switch>
+       
+          {/* <nav>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -27,20 +28,17 @@ function App() {
                 <Link to="/users">Users</Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
 
-          <Switch>
             <Route path="/register">
               <Register />
             </Route>
-            <Route path="/">
-              <CCHome />
-            </Route>
-            <Route path="*">
-              <CCHome />
-            </Route>
+            <Route path="/" component={Home} />
+             
+            <Route path="*" component={Home} />
+            
+            
           </Switch>
-        </div>
       </Router>      
     </div>
   );
