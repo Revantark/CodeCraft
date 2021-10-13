@@ -1,3 +1,15 @@
 .about{
+    display: grid;
+    place-content: center;
     color: white;
+    
+    background: var(--primary-color);
+}
+.about-title{
+    color: white;
+    text-align: center;
+}
+.about-sub{
+    text-align: center;
+    font-size: 2rem;
 }

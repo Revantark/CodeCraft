@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import './landingPage.css'
 import {ReactComponent as DownArrow} from '../../assets/down.svg'
 export default function LandingPage() {
-
-
+    
 
     return (
-        <div className="lp_root fullscreen">
+        <div  className="lp_root fullscreen">
             
-                <div>
+                <div  >
                 <span className='title' >CodeCraft</span>
                 <span className="subtitle">Something here idk</span>
                 </div>
@@ -16,10 +15,13 @@ export default function LandingPage() {
                 <button className='btn'>
                     Register Now
                 </button>
+                <div className='space5' ></div>
+                <a href="#dates">
                 <div className="downIcon" >
                 <DownArrow/>
                 </div>
-        </div>
+                </a>
+                </div>
     )
 }
 
@@ -47,6 +49,7 @@ const Timer = ()=>{
     }
     useEffect(()=>{
         updateTime()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     
     return (
