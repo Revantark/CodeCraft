@@ -25,27 +25,27 @@ function Register() {
   }) 
 
   const [errorObj1, seterrorObj1] = useState({
-    nameError:null,
-    emailError:null,
-    mobileError:null,
-    rollNumberError:null,
-    codechefIDError:null
+    nameError:"",
+    emailError:"",
+    mobileError:"",
+    rollNumberError:"",
+    codechefIDError:""
   })
 
   const [errorObj2, seterrorObj2] = useState({
-    nameError:null,
-    emailError:null,
-    mobileError:null,
-    rollNumberError:null,
-    codechefIDError:null
+    nameError:"",
+    emailError:"",
+    mobileError:"",
+    rollNumberError:"",
+    codechefIDError:""
   })     
 
   async function submitForm() {
-    var nameError=validateName(member1.name);
-    var emailError=validateEmail(member1.email);
-    var mobileError=validatePhNumber(member1.mobile);
-    var rollNumberError=validateRollNumber(member1.rollNumber);
-    var codechefIDError=validateCodeChefID(member1.codechefid);    
+    // var nameError=validateName(member1.name);
+    // var emailError=validateEmail(member1.email);
+    // var mobileError=validatePhNumber(member1.mobile);
+    // var rollNumberError=validateRollNumber(member1.rollNumber);
+    // var codechefIDError=validateCodeChefID(member1.codechefid);    
     
     seterrorObj1((m)=>{
       const mm={
@@ -68,10 +68,12 @@ function Register() {
       }
       return mm;
     })  
-    var flag = Object.values(errorObj1).every(x => x === null || x === '');
-    var flag1= Object.values(errorObj2).every(x => x === null || x === ''); 
+    var flag = Object.values(errorObj1).every(x => x === null);
+    var flag1= Object.values(errorObj2).every(x => x === null); 
       
     if(flag && flag1){ 
+      console.log(!flag)
+      console.log(!flag1)
       await register({
         member1:member1,
         member2:member2
