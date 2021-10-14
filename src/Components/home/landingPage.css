@@ -1,79 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-.lp_root{
-    background: var(--primary-color);
-    display: grid;
-    position: relative;
-    place-content: center;
-    justify-items: center;
-    
+.lp_root {
+  background: var(--primary-color);
+  display: grid;
+  position: relative;
+  place-content: center;
+  justify-items: center;
 }
 
-.title{
-    display: block;
-    color: white;
-    font-size: 4rem;
-    font-weight: bold;
-    font-family: 'IBM Plex Mono';
+.title {
+  display: block;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "IBM Plex Mono";
 }
-.subtitle{
-    color: white;
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-    font-size: 1.5rem;
+.subtitle {
+  color: white;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
 }
-.btn{
-    background: var(--secondary-color);
-    width: 22ch;
-    padding: 12px;
-    border: none;
-    justify-self: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
+.btn {
+  background: var(--secondary-color);
+  width: 22ch;
+  padding: 12px;
+  border: none;
+  justify-self: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
 }
-.timer{
-    color: white;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
+.timer {
+  color: white;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
 }
-.timer-b{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.timer-b {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-.sep{
-    border-left: 1px solid white;
-    height: 60px;
-    margin-left: 6px;
-    left: 50%;
+.sep {
+  border-left: 1px solid white;
+  height: 60px;
+  margin-left: 6px;
+  left: 50%;
 }
 .timer-b > span:first-child {
-    font-size: 3rem;
-    font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  font-family: "Bebas Neue", cursive;
 }
-.downIcon{
-    width: 30px;
-    animation: upAndDown 1.3s ease-in-out infinite;
-    height: 30px;
-    position: absolute;
- 
+.downIcon {
+  width: 30px;
+  animation: upAndDown 1.3s ease-in-out infinite;
+  height: 30px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 @keyframes upAndDown {
-    0%{
-        bottom: 3%;
-    }
-    50%{
-        
-        bottom: 5%;
-    
-    }
-    100%{
-        
-        bottom: 3%;
-    
-    }
+  0% {
+    bottom: 3%;
+  }
+  50% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 3%;
+  }
 }
