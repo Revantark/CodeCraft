@@ -71,7 +71,7 @@ function RegisterForm({member,setMember,no, errorObj,seterrorObj}) {
     
     return (
         <div className="member">
-            <div className="membertitle" style={{height:'20px'}}>Team Member {no}</div>
+            <div className="membertitle" style={{height:'20px'}}>Member {no}</div>
             <InputField
                 type="text"
                 placeholder="Name"
@@ -114,7 +114,6 @@ function RegisterForm({member,setMember,no, errorObj,seterrorObj}) {
             />
             <select value={member.branch}
                 onChange={(e) =>handleBranch(e.target.value)}>
-                <option value="">Select</option>
                 <option value="CSE">CSE</option>
                 <option value="ECE">ECE</option>
                 <option value="IT">IT</option>

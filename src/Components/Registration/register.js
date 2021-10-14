@@ -4,7 +4,11 @@ import RegisterForm from './registerForm';
 import { validateName,validateEmail,validatePhNumber,validateCodeChefID, validateRollNumber} from './validations'
 
 import {register} from '../../firebase/firebase'
+import Dialog from '../globals/dialog';
+import {useHistory} from 'react-router-dom';
+
 function Register() {
+  const history=useHistory();
   const [teamName, setTeamName] = useState();
   const [member1, setMember1] = useState({
     name:"",
@@ -12,7 +16,7 @@ function Register() {
     mobile:"",
     rollNumber:"",
     codechefid:"",
-    branch:"",      
+    branch:"CSE",      
   })
 
   const [member2, setMember2] = useState({
@@ -21,7 +25,7 @@ function Register() {
     mobile:"",
     rollNumber:"",
     codechefid:"",
-    branch:"",      
+    branch:"IT",      
   }) 
 
   const [errorObj1, seterrorObj1] = useState({
@@ -38,15 +42,11 @@ function Register() {
     mobileError:"",
     rollNumberError:"",
     codechefIDError:""
-  })     
+  }) 
+  
+  const [status, setstatus] = useState(null);
 
   async function submitForm() {
-    // var nameError=validateName(member1.name);
-    // var emailError=validateEmail(member1.email);
-    // var mobileError=validatePhNumber(member1.mobile);
-    // var rollNumberError=validateRollNumber(member1.rollNumber);
-    // var codechefIDError=validateCodeChefID(member1.codechefid);    
-    
     seterrorObj1((m)=>{
       const mm={
         nameError:validateName(member1.name),
@@ -74,10 +74,18 @@ function Register() {
     if(flag && flag1){ 
       console.log(!flag)
       console.log(!flag1)
-      await register({
+      var status= await register({
         member1:member1,
         member2:member2
       })
+      if(status===true){
+        console.log("Register Successful");
+        setstatus("Register Successful");
+      }
+      else{
+        console.log("Register Unsuccessful");
+        setstatus("Register Unsuccessful")
+      }
     }
     else{
       console.log("Erraneous");
@@ -85,8 +93,27 @@ function Register() {
    }
    
     return (
-        <div className="register" style={{margin:'25px'}}>
-            <div className="registerTitle">REGISTER</div>
+      <div className="page">
+        <nav>
+          <div className="registerTitle">REGISTER</div>
+        </nav>
+
+        {
+          status && <Dialog message={status} setstatus={setstatus} 
+          onOK={function(){
+            setstatus(null);
+            history.replace('/')
+          }} />
+        }
+        
+        <div className="register">
+            <div className="instructions">
+              <ul style={{color:'#ffd000'}}>
+                <li>register only if both of you and your counter part did not register </li>
+                <li>Create Your CodeChef account prior to registration</li>
+              </ul>
+            </div>
+
             <div className="registerform"> 
               <RegisterForm 
               member={member1} setMember={setMember1} 
@@ -101,6 +128,7 @@ function Register() {
             </div>
             <button onClick={()=>submitForm()} className="button">Submit</button>                
         </div>
+      </div>
     )
 }
 

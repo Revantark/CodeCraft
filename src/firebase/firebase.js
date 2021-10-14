@@ -28,8 +28,10 @@ async function register(team){
   try {
     const docRef = await addDoc(collection(db,"registrations"), team);
     console.log("Document written with ID: ", docRef.id);
+    return true; 
   } catch (e) {
     console.error("Error adding document: ", e);
+    return false
   }
 }
 
