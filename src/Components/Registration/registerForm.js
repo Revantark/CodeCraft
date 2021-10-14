@@ -112,7 +112,7 @@ function RegisterForm({member,setMember,no, errorObj,seterrorObj}) {
                 value={member.codechefid}
                 onChange={(e) => handleCodeChefID(e.target.value)}
             />
-            <select value={member.branch} 
+            <select value={member.branch}
                 onChange={(e) =>handleBranch(e.target.value)}>
                 <option value="">Select</option>
                 <option value="CSE">CSE</option>

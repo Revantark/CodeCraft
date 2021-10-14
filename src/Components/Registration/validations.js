@@ -32,7 +32,7 @@ export const validatePhNumber = (phoneNumber) => {
 export const validateEmail=(email,temp)=>{
     const regE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if (email.length ==0) {
+    if (email.length ===0) {
         return "email cannot be empty";
     }
     else if (!regE.test(email)) {
@@ -46,7 +46,7 @@ export const validateEmail=(email,temp)=>{
 export const validateRollNumber=(rn)=>{
     var rollNumber = rn.toUpperCase();
     let rollRegex = new RegExp(/^(18|19|20|21)P61A(01|02|03|04|05|12)[(a-z)|(0-9)][0-9]$/i);
-    if(rollNumber.length==0){
+    if(rollNumber.length===0){
         return "roll number cannot be empty";
     }
     else if(rollNumber.length<10){
