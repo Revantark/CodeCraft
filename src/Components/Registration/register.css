@@ -8,13 +8,20 @@
 }
 
 .registerform{
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 60px;
 }
 
+.registerTitle{
+    font-weight: 600;
+    font-size: large;
+    color: white;
+    letter-spacing: 2px;    
+}
 
 .member{
     display: flex;
@@ -24,14 +31,9 @@
     gap: 36px;
 }
 
-.title{
-    color: #ededed;
-    text-align: left;
-}
-
 .button{
     background-color: #00009f;
-    color: #ededed;
+    color: #ededff;
     outline: none;
     border: none;
     text-transform: capitalize;

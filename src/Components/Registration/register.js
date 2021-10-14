@@ -1,237 +1,103 @@
-import React, { useState,useEffect } from 'react'
-import InputField from '../globals/input';
+import React, { useState } from 'react'
 import './register.css'
+import RegisterForm from './registerForm';
+import { validateName,validateEmail,validatePhNumber,validateCodeChefID, validateRollNumber} from './validations'
+
+import {register} from '../../firebase/firebase'
 function Register() {
-    const [name1, setname1] = useState();
-    const [email1, setemail1] = useState();
-    const [mobile1, setmobile1] = useState();
-    const [rollnumber1, setrollnumber1] = useState();
-    const [codechefid1, setcodechefid1] = useState();
+  const [teamName, setTeamName] = useState();
+  const [member1, setMember1] = useState({
+    name:"",
+    email:"",
+    mobile:"",
+    rollNumber:"",
+    codechefid:"",
+    branch:"",      
+  })
 
-    const [name1error, setname1error] = useState();
-    const [email1error, setemail1error] = useState();
-    const [mobile1error, setmobile1error] = useState();
-    const [rollnumber1error, setrollnumber1error] = useState();
-    const [codechefid1error, setcodechefid1error] = useState();
+  const [member2, setMember2] = useState({
+    name:"",
+    email:"",
+    mobile:"",
+    rollNumber:"",
+    codechefid:"",
+    branch:"",      
+  }) 
 
-    const [name2, setname2] = useState();
-    const [email2, setemail2] = useState();
-    const [mobile2, setmobile2] = useState();
-    const [rollnumber2, setrollnumber2] = useState();
-    const [codechefid2, setcodechefid2] = useState();
+  const [errorObj1, seterrorObj1] = useState({
+    nameError:null,
+    emailError:null,
+    mobileError:null,
+    rollNumberError:null,
+    codechefIDError:null
+  })
 
-    const [name2error, setname2error] = useState();
-    const [email2error, setemail2error] = useState();
-    const [mobile2error, setmobile2error] = useState();
-    const [rollnumber2error, setrollnumber2error] = useState();
-    const [codechefid2error, setcodechefid2error] = useState();
+  const [errorObj2, seterrorObj2] = useState({
+    nameError:null,
+    emailError:null,
+    mobileError:null,
+    rollNumberError:null,
+    codechefIDError:null
+  })     
 
-    async function register(){
-      if()
-      
-    }
-
-
-    useEffect(() => {
-
-      return () => {
-
-        
-      }
-    }, [])
-    const validateName = (e,temp) => {
-        const fullName = e.target.value;
-        let flag =null;
-
-        if(temp){
-            if (fullName === "") {
-            setname1error("Name cannot be Empty");
-            } else if (!/^[a-zA-Z .]*$/.test(fullName)) {
-            setname1error("Name must contain only alphabets");
-            } else if (fullName.length < 3) {
-                setname1error("Name must be atleast 3 characters!");
-            } else {
-                setname1error(null);
-            flag = true;
-            }
-            setname1(e.target.value)
-        }
-        else{
-            if (fullName === "") {
-                setname2error("Name cannot be Empty");
-              } else if (!/^[a-zA-Z .]*$/.test(fullName)) {
-                setname2error("Name must contain only alphabets");
-              } else if (fullName.length < 3) {
-                  setname2error("Name must be atleast 3 characters!");
-              } else {
-                  setname2error(null);
-                flag = true;
-              }
-              setname2(e.target.value);
-        }   
-        return flag;
-      }
-
-    const validatePhNumber = (e,temp) => {
-        const phoneNumber = e.target.value;
-        const regE = /^[6-9]\d{9}$/;
-        let flag = false;
-
-        if(temp){
-            if (phoneNumber.toString().length > 10) {
-                setmobile1error("Mobile Number exceeds 10 digits");
-              } else if (phoneNumber.toString().length < 10) {
-                  setmobile1error("Mobile Number must contain 10 digits");
-              } else if (!regE.test(phoneNumber)) {
-                  setmobile1error("Enter a valid Mobile Number");
-              } else {
-                  setmobile1error(null);
-                flag = true;
-              }
-              setmobile1(e.target.value);
-        }
-        else{
-            if (phoneNumber.toString().length > 10) {
-                setmobile2error("Mobile Number exceeds 10 digits");
-              } else if (phoneNumber.toString().length < 10) {
-                  setmobile2error("Mobile Number must contain 10 digits");
-              } else if (!regE.test(phoneNumber)) {
-                  setmobile2error("Enter a valid Mobile Number");
-              } else {
-                  setmobile2error(null);
-                flag = true;
-              }
-              setmobile2(e.target.value);
-        }   
-        return flag;
-      }
-
-      const validateEmail=(e,temp)=>{
-        const email = e.target.value;
-        const regE = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  async function submitForm() {
+    var nameError=validateName(member1.name);
+    var emailError=validateEmail(member1.email);
+    var mobileError=validatePhNumber(member1.mobile);
+    var rollNumberError=validateRollNumber(member1.rollNumber);
+    var codechefIDError=validateCodeChefID(member1.codechefid);    
     
-        let flag = false;
-
-        if(temp){
-            if (email.length ==0) {
-                setemail1error("Email Not entered");
-              }
-              else if (!regE.test(email)) {
-                setemail1error("Email Invalid");
-              } 
-              else {
-                setemail1error(null);
-                flag = true;
-              }
-              setemail1(e.target.value);
-        }
-        else{
-            if (email.length ==0) {
-                setemail2error("Email Not entered");
-              }
-              else if (!regE.test(email)) {
-                setemail2error("Email Invalid");
-              } 
-              else {
-                setemail2error(null);
-                flag = true;
-              }
-              setemail2(e.target.value);
-        }   
-        return flag;
+    seterrorObj1((m)=>{
+      const mm={
+        nameError:validateName(member1.name),
+        emailError:validateEmail(member1.email),
+        mobileError:validatePhNumber(member1.mobile),
+        rollNumberError:validateRollNumber(member1.rollNumber),
+        codechefIDError:validateCodeChefID(member1.codechefid)
       }
+      return mm;
+    })
 
+    seterrorObj2((m)=>{
+      const mm={
+        nameError:validateName(member2.name),
+        emailError:validateEmail(member2.email),
+        mobileError:validatePhNumber(member2.mobile),
+        rollNumberError:validateRollNumber(member2.rollNumber),
+        codechefIDError:validateCodeChefID(member2.codechefid)
+      }
+      return mm;
+    })  
+    var flag = Object.values(errorObj1).every(x => x === null || x === '');
+    var flag1= Object.values(errorObj2).every(x => x === null || x === ''); 
+      
+    if(flag && flag1){ 
+      await register({
+        member1:member1,
+        member2:member2
+      })
+    }
+    else{
+      console.log("Erraneous");
+    }   
+   }
+   
     return (
         <div className="register" style={{margin:'25px'}}>
+            <div className="registerTitle">REGISTER</div>
             <div className="registerform"> 
-                       
-              <div className="member">
-                <div className="title" style={{height:'20px'}}>Team Member 1</div>
-                <InputField
-                    type="text"
-                    placeholder="Name"
-                    error={name1error ? name1error : ""}
-                    value={name1}
-                    maxLength="15"
-                    onChange={(e) => validateName(e,true)}
-                />
-                <InputField
-                    type="text"
-                    placeholder="Email"
-                    error={email1error ? email1error : ""}
-                    value={email1}
-                    onChange={(e) => validateEmail(e,true)}
-                />
-                <InputField
-                    type="text"
-                    placeholder="Mobile Number"
-                    error={mobile1error ? mobile1error : ""}
-                    value={mobile1}
-                    maxLength="10"
-                    onChange={(e) => validatePhNumber(e,true)}
-                />
-                <InputField
-                    type="text"
-                    placeholder="Roll Number"
-                    error={rollnumber1error ? rollnumber1error : ""}
-                    value={rollnumber1}
-                    maxLength="10"
-                    onChange={(e) => setrollnumber1(e.target.value)}
-                />            
-                <InputField
-                    type="text"
-                    placeholder="CodeChef ID"
-                    error={codechefid1error ? codechefid1error : ""}
-                    value={codechefid1}
-                    onChange={(e) => setcodechefid1(e.target.value)}
-                />            
-              </div>
-
-              <div className="member">
-                <div className="title" style={{height:'20px'}}>Team Member 2</div>
-                <InputField
-                    type="text"
-                    placeholder="Name"
-                    error={name2error ? name2error : ""}
-                    value={name2}
-                    maxLength="15"
-                    onChange={(e) => validateName(e,false)}
-                />
-                <InputField
-                    type="text"
-                    placeholder="Email"
-                    error={email2error ? email2error : ""}
-                    value={email2}
-                    onChange={(e) => validateEmail(e,false)}
-                />
-                <InputField
-                    type="text"
-                    placeholder="Mobile Number"
-                    error={mobile2error ? mobile2error : ""}
-                    value={mobile2}
-                    maxLength="10"
-                    onChange={(e) => validatePhNumber(e,false)}
-                />
-                <InputField
-                    type="text"
-                    placeholder="Roll Number"
-                    error={rollnumber2error ? rollnumber2error : ""}
-                    value={rollnumber2}
-                    maxLength="10"
-                    onChange={(e) => setrollnumber2(e.target.value)}
-                />            
-                <InputField
-                    type="text"
-                    placeholder="CodeChef ID"
-                    error={codechefid2error ? codechefid2error : ""}
-                    value={codechefid2}
-                    onChange={(e) => setcodechefid2(e.target.value)}
-                />            
-              </div>
-
+              <RegisterForm 
+              member={member1} setMember={setMember1} 
+              no="1"
+              errorObj={errorObj1} seterrorObj={seterrorObj1}
+              />
+              <RegisterForm 
+              member={member2} setMember={setMember2} 
+              no="2" 
+              errorObj={errorObj2} seterrorObj={seterrorObj2}
+              />                    
             </div>
-
-            <button onClick={()=>register()} className="button">Submit</button>                
+            <button onClick={()=>submitForm()} className="button">Submit</button>                
         </div>
     )
 }
