@@ -1,0 +1,25 @@
+select{
+    color:#000020;
+    background-color: #edeeff;
+    border:none;
+    outline: none;    
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-align: left;
+    font-size: large;
+}
+option:hover{
+    background:red;
+}
+
+.membertitle{
+    font-size: larger;    
+}
+
+.member{
+    width: 100%;
+}
+
+option{
+    outline: none;
+}

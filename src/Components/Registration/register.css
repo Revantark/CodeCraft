@@ -1,0 +1,99 @@
+.page{
+    text-align: center;
+}
+
+.instructions{
+    text-align: left;
+    width: 50%;    
+}
+
+.register{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;    
+}
+
+.verticalLine {
+    width: 0px;
+    border:0.5px solid #ededff;
+    height: 30px;
+}
+
+nav{
+    z-index: 1000;
+    overflow: hidden;
+    background: #000013;
+    margin: 30px 40px;
+    border-radius: 35px;
+    /* border:1px solid teal; */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    color: #ededff;
+    height: 55px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+nav>*{
+    display: block;
+}
+
+.registerform{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.registerTitle{
+    font-weight: 600;
+    font-size: large;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;    
+}
+
+.member{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.button{
+    background-color: #00009f;
+    color: #ededff;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    font-size: large;
+    border-radius: 4px;
+    padding: 6px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .registerform{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .registerform{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+}
