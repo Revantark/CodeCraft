@@ -1,12 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&display=swap");
+
 :root{
-  --primary-color: #000029;
-  --secondary-color: #0000ed;
+  --primary-color: #2b2d42 ;
+  --secondary-color: #ef233c;
+  --txt-color:#edf2f4;
+  --ter-color:#e0fbfc;
 }
+
 .space5{
   height: 5rem;
 }
 .v-line{
   width: 2px;
+<<<<<<< HEAD
   background: white;
 }
 
@@ -14,4 +20,7 @@
   margin: 0;
   padding: 0;
 
+=======
+  background: black;
+>>>>>>> 3ecae6da99a31839388585d9d14b275b56a360fa
 }
