@@ -5,9 +5,10 @@ export default function LandingPage() {
     
 
     return (
-        <div  className="lp_root fullscreen">
-            
+        <div id='landingPage' className="lp_root fullscreen">
+
                 <div  >
+
                 <span className='title' >CodeCraft</span>
                 <span className="subtitle">Something here idk</span>
                 </div>

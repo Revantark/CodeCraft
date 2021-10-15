@@ -1,5 +1,8 @@
 .dates-container{
     padding-top: 3rem;
+    display: grid;
+    place-content: center;
+    background:var(--ter-color);
 }
 .date-page{
     display: grid;
@@ -7,12 +10,11 @@
     text-align: center;
     align-content: center;
     justify-content: space-around;
-    background: var(--primary-color);
-    color: white;
+
     gap: 5rem;
 }
 .dates-title{
-    color: white;
+    
     text-align: center;
     margin: 0;
     font-size: 3rem ;
@@ -32,4 +34,7 @@
 }
 .date2{
     justify-self: start;
+}
+.dates-container *{
+    color: black;
 }

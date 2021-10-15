@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+.nav-bar{
+    display: grid;
+    position: fixed;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    backdrop-filter: blur(17px);
+    color: var(--txt-color);
+    z-index: 1;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.logo{
+    justify-self: start;
+    padding-left: 6rem;
+}
+.nav-links{
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: column;
+    padding-right: 6rem;
+
+    justify-self: end;
+}
+@media screen and (max-width:480px){
+    .nav-bar{
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+    }
+    .logo{
+        justify-self: center;
+        padding: 0;
+        
+    }
+    .nav-links{
+        justify-self: center;
+        padding: 0;
+    }
+    
+}

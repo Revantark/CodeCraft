@@ -1,8 +1,12 @@
 import React from 'react'
 import './dates.css'
 export default function Dates() {
+
+    
+    
+
     return (
-        <div id='dates' className='fullscreen dates-container' style={{background:'var(--primary-color'}} >
+        <div id='dates' className='fullscreen dates-container'  >
 
         <p className='dates-title' >Event dates</p>
         <section  className=' date-page' >
@@ -22,6 +26,7 @@ export default function Dates() {
                  <p>SomeMoreInfoHere</p>
             </div>
         </section>
+        <div className="space5"></div>
         </div>
     )
 }
