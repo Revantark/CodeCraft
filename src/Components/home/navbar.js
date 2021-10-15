@@ -4,6 +4,7 @@ import './navbar.css'
 export default function NavBar() {
 
     const [color,setColor] = useState('var(--txt-color)')
+    
     useEffect(()=>{
         window.addEventListener("scroll", _ => {
             
@@ -27,10 +28,10 @@ export default function NavBar() {
             coding.Studio();
         </div>    
         <div className='nav-links'>
-        <span>Home</span>
-        <span>Event details</span>
+        <a href="#landingPage">Home</a>
+        <a href="#dates">Event details</a>
         
-        <span>About codeCraft</span>
+        <a href="#codeCraft" >About codeCraft</a>
         
         </div>
         

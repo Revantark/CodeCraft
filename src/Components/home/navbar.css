@@ -24,6 +24,9 @@
 
     justify-self: end;
 }
+.nav-links span{
+    cursor: pointer;
+}
 @media screen and (max-width:480px){
     .nav-bar{
         grid-template-columns: 1fr;
