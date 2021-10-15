@@ -11,7 +11,7 @@
 .title {
   display: block;
   color: white;
-  font-size: 4rem;
+  font-size: min(4rem,15vw);
   font-weight: bold;
   font-family: "IBM Plex Mono";
 }
@@ -21,7 +21,10 @@
   padding-left: 0.5rem;
   font-size: 1.5rem;
 }
-.btn {
+.caption{
+  margin-bottom: 1.5rem;
+}
+.btn-reg {
   background: var(--secondary-color);
   width: 22ch;
   padding: 12px;
@@ -33,7 +36,10 @@
 }
 .timer {
   color: white;
-  margin: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.3rem;
   display: flex;
   align-items: center;
 }
@@ -49,7 +55,7 @@
   left: 50%;
 }
 .timer-b > span:first-child {
-  font-size: 3rem;
+  font-size: min(3rem,10vw);
   font-family: "Bebas Neue", cursive;
 }
 .downIcon {

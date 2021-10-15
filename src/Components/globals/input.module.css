@@ -10,7 +10,8 @@
     left          : 0.1em;
     padding-left  : 0.1em;
     padding-right : 0.2em;
-    color         : #5a5858;
+    color         : #8d99ae;
+    font-weight: bold;
     font-size     : 1em;
     top           : var(--label-top);
     pointer-events: none;
@@ -23,7 +24,7 @@
     box-sizing:border-box;
     background-color: transparent;
     border       : none;
-    border-bottom: 1px solid #ededff;
+    border-bottom: 1px solid #8d99ae;
     padding      : 0.6em;
     padding-left: 0.15em;
     font-size    : 1em;
@@ -61,11 +62,11 @@
     font-size   : 0.9em;
     top         : -15px;
     color       : #ededff;
-    border-color: #ededff;
+    border-color: #fb8500;
 }
 
 .input:focus {
-    border-color: #ededff;
+    border-color: #fb8500;
 }
 .errorField:focus{
     border-color: red;

@@ -6,7 +6,7 @@ export default function Footer(){
             <div className="inner-footer">
                 <div className="footer-items">
                     <h1>coding.Studio();</h1>
-                    <i class="fas fa-code"></i>
+                    <i className="fas fa-code"></i>
                     <p>Programming Club - VBIT</p>
                     
                 </div>
@@ -38,7 +38,7 @@ export default function Footer(){
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div className="footer-bottom">
                 Copyright &copy; coding.Studio();
             </div>
         </section>

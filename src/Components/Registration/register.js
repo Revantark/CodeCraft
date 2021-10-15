@@ -93,7 +93,7 @@ function Register() {
    }
    
     return (
-      <div className="page">
+      <div className="page"  >
         <nav>
           <div className="registerTitle">REGISTER</div>
         </nav>

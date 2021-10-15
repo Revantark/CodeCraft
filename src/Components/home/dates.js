@@ -10,21 +10,40 @@ export default function Dates() {
 
         <p className='dates-title' >Event dates</p>
         <section  className=' date-page' >
-            <div className="date1">
+        <div className="date0">
                  <p className='date' >
-                     19 
+                     20
                  </p>
-                 <p>SomeInfoHere</p>
-                 <p>SomeMoreInfoHere</p>
+                 <div className="dateCard">
+                 <p>Some CP talks</p>
+                 <p>Mock Contest</p>
+                 </div>
+                
             </div>
             <div className="v-line" ></div>
+
+            <div className="date1 ">
+                 <p className='date' >
+                     25 
+                 </p>
+                 <div className='dateCard' >
+                 <p>Some CP talks</p>
+                 <p>Mock Contest</p>
+                 </div>
+                
+            </div>
+            <div className="v-line " ></div>
             <div className="date2">
             <p className='date' >
-                     20 
+                     26
                  </p>
-                 <p>SomeInfoHere</p>
-                 <p>SomeMoreInfoHere</p>
+                 <div className="dateCard">
+                 <p>Contest</p>
+                 <p>Contest</p>
+                 </div>
             </div>
+            
+
         </section>
         <div className="space5"></div>
         </div>

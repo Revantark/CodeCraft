@@ -27,11 +27,17 @@ export default function NavBar() {
         <div className="logo">
             coding.Studio();
         </div>    
-        <div className='nav-links'>
-        <a href="#landingPage">Home</a>
-        <a href="#dates">Event details</a>
+        <div  className='nav-links'>
+        <a style={{
+            color:`${color}`
+        }} href="#landingPage">Home</a>
+        <a style={{
+            color:`${color}`
+        }} href="#dates">Event details</a>
         
-        <a href="#codeCraft" >About codeCraft</a>
+        <a style={{
+            color:`${color}`
+        }} href="#codeCraft" >About codeCraft</a>
         
         </div>
         
