@@ -30,7 +30,8 @@ export default function LandingPage() {
 const Timer = ()=>{
     const [time,setTime] = useState(['00','00','00','00'])
     const countDownDate = new Date("Oct 19, 2021 00:00:00").getTime();
-    const updateTime = ()=>{
+    
+    useEffect(()=>{
         const x = setInterval(function() {
 
             const now = new Date().getTime();
@@ -48,9 +49,7 @@ const Timer = ()=>{
               
             }
           }, 1000);
-    }
-    useEffect(()=>{
-        updateTime()
+          return ()=>clearInterval(x)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     
