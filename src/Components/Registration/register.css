@@ -2,14 +2,17 @@
     text-align: center;
     background: var(--primary-color);
     padding-top: 30px;
-    height: 100vh;
     width: 100vw;
 }
 
+
 .instructions{
-    
-    width: 50%;    
+    width: 50%;
+    text-align:left;
+    font-size: smaller;
 }
+
+
 
 .register{
     display: flex;
@@ -23,6 +26,9 @@
     width: 0px;
     border:0.5px solid #ededff;
     height: 30px;
+    display: inline;
+    margin: auto 5px;    
+
 }
 
 nav{
@@ -31,7 +37,7 @@ nav{
     background: #000013;
     
     border-radius: 35px;
-    /* border:1px solid teal; */
+    border:1px solid teal;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     color: #ededff;
     height: 55px;
@@ -43,6 +49,7 @@ nav{
     align-self: center;
     align-items: center;
 }
+
 
 .registerform{
     width:50%;
@@ -58,7 +65,14 @@ nav{
     font-size: large;
     color: white;
     letter-spacing: 2px;
-    text-align: center;    
+    text-align: center;
+    display: inline;
+    margin: auto 5px;    
+}
+
+.registerTitle:hover{
+    color: goldenrod;
+    cursor: pointer; 
 }
 
 .member{
@@ -79,11 +93,20 @@ nav{
     padding: 6px 20px;
     margin-top: 10px;
     margin-bottom: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.button:active, .button:active,.button:hover{
+    box-shadow:orangered 1px 1px 10px;
 }
 
 @media only screen and (max-width: 900px) {
     .registerform{
         width: 70%;
+    }
+    .instructions{
+        width: 60%;
     }
 }
 
@@ -95,5 +118,8 @@ nav{
         justify-content: center;
         align-items: center;
         gap: 60px;
+    }
+    .instructions{
+        width: 85%;
     }
 }
