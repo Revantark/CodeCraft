@@ -8,6 +8,7 @@
 .date-page{
     display: grid;
     width: 100%;
+    height: 100%;
     grid-template-columns: 1fr 5px 1fr 5px 1fr;
     text-align: center;
     align-content: center;
@@ -30,7 +31,9 @@
     background: white;
     box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.459);
     padding: 2rem;
+    
     width: min(10vw,300px);
+   
     
 }
 .date::after{
@@ -42,9 +45,14 @@
     justify-self: center;
 }
 .date2{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     justify-self: center;
+    
+
 }
 .date0{
+    
     
     justify-self: center;
 }
@@ -73,13 +81,15 @@
     .dates-title{
         margin-bottom:3rem;
     }
-    .date-page p{
-        margin: 0;
-        text-align: center;
-    } 
+        .date-page p{
+            margin: 0;
+            text-align: center;
+        } 
     .dateCard{
         padding: 1rem;
+       
         justify-self: center;
         width: 70vw;
+       
     }
 }

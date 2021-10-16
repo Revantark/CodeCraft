@@ -15,7 +15,7 @@ export default function NavBar() {
     }
     useEffect(()=>{
 
-        window.addEventListener("scroll",changeColor, true);
+        window.addEventListener("scroll",changeColor);
         return ()=>window.removeEventListener('scroll',changeColor)
     },[])
 

@@ -14,7 +14,7 @@ export default function LandingPage() {
                 <span className="subtitle">Something here idk</span>
                 </div>
                 <Timer/>
-                <button onClick={()=>history.push('register')} className='btn-reg'>
+                <button onClick={()=>history.replace('register')} className='btn-reg'>
                     Register Now
                 </button>
                 <div className='space5' ></div>
