@@ -3,8 +3,11 @@
     display: grid;
     overflow-x: hidden;
     place-content: center;
-    background:var(--ter-color);
+    /* height: 100vh; */
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1014%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsRadialGradient1015)'%3e%3c/rect%3e%3cpath d='M1440 0L1397.41 0L1440 145.68z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1397.41 0L1440 145.68L1440 217.93L1243.17 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M1243.17 0L1440 217.93L1440 376.11L661.7400000000001 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M661.74 0L1440 376.11L1440 489.68L590.95 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 560L207.12 560L0 392.18z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 392.18L207.12 560L824.14 560L0 364.98z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 364.98L824.14 560L955.39 560L0 198.68z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 198.68L955.39 560L997.42 560L0 107.76z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1014'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='50%25' cy='50%25' r='772.53' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1015'%3e%3cstop stop-color='rgba(210%2c 242%2c 242%2c 1)' offset='0.71'%3e%3c/stop%3e%3cstop stop-color='rgba(210%2c 242%2c 242%2c 1)' offset='0.9'%3e%3c/stop%3e%3cstop stop-color='rgba(210%2c 242%2c 242%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");    
 }
+
 .date-page{
     display: grid;
     width: 100%;
@@ -16,31 +19,38 @@
 
     gap: min(6rem,7vw);
 }
-.dates-title{
-    
+.dates-title{    
     text-align: center;
     margin: 0;
     font-size: min(3rem,9vw) ;
     margin-bottom: 4rem;
 }
 .date{
-    font-size: min(3rem,9vw);
-    
+    font-size: min(3rem,9vw); 
+    font-weight: 700;   
+}
+
+.border1 {
+	height: 3px;
+	width: 40px;
+	color: black;
+	border: 2px;
 }
 .dateCard{
-    background: white;
-    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.459);
-    padding: 2rem;
-    
-    width: min(10vw,300px);
-   
-    
+    background: transparent;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #000099;
+    font-size: large;
+    width: min(15vw,350px);    
 }
+
 .date::after{
     content: "th";
     position: absolute;
     font-size: 1.5rem;
 }
+
 .date1{
     justify-self: center;
 }
@@ -60,7 +70,7 @@
     color: black;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:600px) {
     .date-page{
         grid-template-columns: 1fr;
         gap: 2rem;

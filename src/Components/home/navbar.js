@@ -13,6 +13,7 @@ export default function NavBar() {
                 
             }else setColor('var(--txt-color)')
     }
+    
     useEffect(()=>{
 
         window.addEventListener("scroll",changeColor);

@@ -66,7 +66,7 @@
 }
 
 .input:focus {
-    border-color: #fb8500;
+    border-color: whitesmoke;
 }
 .errorField:focus{
     border-color: red;
