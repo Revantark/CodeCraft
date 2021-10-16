@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import './landingPage.css'
 import {ReactComponent as DownArrow} from '../../assets/down.svg'
+import { useHistory } from 'react-router'
 export default function LandingPage() {
-    
+    const history = useHistory()
 
     return (
         <div id='landingPage' className="lp_root fullscreen">
 
-                <div  >
+                <div className='caption' >
 
                 <span className='title' >CodeCraft</span>
                 <span className="subtitle">Something here idk</span>
                 </div>
                 <Timer/>
-                <button className='btn'>
+                <button onClick={()=>history.push('register')} className='btn-reg'>
                     Register Now
                 </button>
                 <div className='space5' ></div>
@@ -54,7 +55,10 @@ const Timer = ()=>{
     },[])
     
     return (
+    <>
+    <span>Registration closes in</span>
         <div className="timer" >
+
             <div className='timer-b timer' >
                 <span>{time[0]}</span>
                 <span>Days</span>
@@ -77,5 +81,6 @@ const Timer = ()=>{
                 <span>Seconds   </span>
             </div>
         </div>
+        </>
     )
 }

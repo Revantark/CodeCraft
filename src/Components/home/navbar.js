@@ -4,6 +4,7 @@ import './navbar.css'
 export default function NavBar() {
 
     const [color,setColor] = useState('var(--txt-color)')
+    
     useEffect(()=>{
         window.addEventListener("scroll", _ => {
             
@@ -26,11 +27,17 @@ export default function NavBar() {
         <div className="logo">
             coding.Studio();
         </div>    
-        <div className='nav-links'>
-        <span>Home</span>
-        <span>Event details</span>
+        <div  className='nav-links'>
+        <a style={{
+            color:`${color}`
+        }} href="#landingPage">Home</a>
+        <a style={{
+            color:`${color}`
+        }} href="#dates">Event details</a>
         
-        <span>About codeCraft</span>
+        <a style={{
+            color:`${color}`
+        }} href="#codeCraft" >About codeCraft</a>
         
         </div>
         

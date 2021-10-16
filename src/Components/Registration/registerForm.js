@@ -4,8 +4,6 @@ import './registerForm.css'
 import { validateName,validateEmail,validatePhNumber,validateCodeChefID, validateRollNumber} from './validations'
 
 function RegisterForm({member,setMember,no, errorObj,seterrorObj}) {    
-    const [rollNumberError, setrollNumberError] = useState();
-    const [codechefIDError, setcodechefIDError] = useState();    
 
     function handleName(e) {
         setMember((m)=>{

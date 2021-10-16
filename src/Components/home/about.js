@@ -2,14 +2,17 @@ import React from 'react'
 import './about.css'
 export default function About() {
     return (
-        <div className="fullscreen about">            
+        <div id="codeCraft" className="fullscreen about">            
             <span className="about-title" >
                 About Me
             </span>
+            <div className="underline">
+                
+            
+            </div>
             <span className="about-sub" >
-            Lorem ipsum dolor sit amet, consectet magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
- 
+            lorem ipsum
+            In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
             </span>
             <div className="space5"></div>
         </div>

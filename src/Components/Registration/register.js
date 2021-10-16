@@ -93,9 +93,13 @@ function Register() {
    }
    
     return (
-      <div className="page">
+      <div className="page"  >
         <nav>
-          <div className="registerTitle">REGISTER</div>
+          <ul style={{listStyle:'none'}}>
+          <li className="registerTitle" onClick={()=>history.replace('/')}>HOME</li>
+          <li className="verticalLine"></li>
+          <li className="registerTitle" onClick={()=>history.replace('/register')}>REGISTER</li>
+          </ul>
         </nav>
 
         {
