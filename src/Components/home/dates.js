@@ -8,7 +8,7 @@ export default function Dates() {
         <p className='dates-title' >Events this October</p>
         <section  className=' date-page' >
             <div className="date0">
-                <p className='date' >
+                <p className='date'>
                     20                                  
                 </p>                
                 <div className="dateCard">
