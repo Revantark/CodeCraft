@@ -108,9 +108,9 @@ function Register() {
         
         <div className="register">
             <div className="instructions">
-              <ul style={{color:'#ffd000'}}>
-                <li>register only if both of you and your counter part did not register </li>
-                <li>Create Your CodeChef account prior to registration</li>
+              <ul style={{color:'#ffd000',listStyle:'inside' }}>
+                <li style={{marginBottom:'10px',}}>register only if both of you did not register </li>
+                <li>create your codechef account prior to registration</li>
               </ul>
             </div>
 

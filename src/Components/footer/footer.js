@@ -13,7 +13,7 @@ export default function Footer(){
                 <div className="footer-items">
                     <h3>Quick Links</h3>
                     <div className="border1"></div>
-                    <ul>
+                    <ul className="list">
                         <a href="/home"><li>Home</li></a>
                         <a href="/home"><li>Contact us</li></a>
                         <a href="/home"><li>About us</li></a>
@@ -22,7 +22,7 @@ export default function Footer(){
                 <div className="footer-items">
                     <h3>Contact Us</h3>
                     <div className="border1"></div>
-                    <ul>
+                    <ul className="list">
                         <li><i className="fa fa-map-marker"></i>VBIT,Hyderabad</li>
                         <li><i className="fa fa-phone"></i>1234567890</li>
                         <li ><i className="fa fa-envelope"></i>executives@codingstudio.club</li>
@@ -31,7 +31,7 @@ export default function Footer(){
                 <div className="footer-items" >
                     <h3>Follow Us on</h3>
                     <div className="border1"></div>
-                    <ul>
+                    <ul className="list">
                         <li><i className="fab fa-facebook"></i><a href="/home">Facebook</a></li>
                         <li><i className="fab fa-instagram"></i><a href="/home">Instagram</a></li>
                         <li><i className="fab fa-twitter"></i><a href="/home">Twitter</a></li>

@@ -50,18 +50,18 @@ ul {
 	letter-spacing: 0.5px;	
  }
 
-ul a {
+.list a {
 	text-decoration: none;
 	outline: none;
 	color: #fff;
 	transition: 0.3s;
 }
 
-ul a:hover {
+.list a:hover {
 	color: #ff9800;
 }
 
-ul li {
+.list li {
 	margin: 10px 0;
 	height: 25px;
 }

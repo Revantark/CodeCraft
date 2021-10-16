@@ -1,7 +1,7 @@
 select{
-    color:#000020;
-    background-color: #edeeff;
-    border:none;
+    background-color:#000020;
+    color: #edeeff;
+    border:0.2px solid whitesmoke;
     outline: none;    
     border-radius: 5px;
     padding: 5px 20px;
