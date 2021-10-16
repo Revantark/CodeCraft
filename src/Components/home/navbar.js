@@ -4,18 +4,19 @@ import './navbar.css'
 export default function NavBar() {
 
     const [color,setColor] = useState('var(--txt-color)')
-    
-    useEffect(()=>{
-        window.addEventListener("scroll", _ => {
-            
-            const scroll = document.documentElement.scrollTop || document.body.scrollTop
+    const changeColor = ()=>{
+        const scroll = document.documentElement.scrollTop || document.body.scrollTop
             const es = document.getElementById('dates').scrollHeight-100
             const landingPageSh = document.getElementById('landingPage').scrollHeight + es +100
             if(scroll >= es && scroll <= landingPageSh){
                 setColor('black')
+                
             }else setColor('var(--txt-color)')
-        }, true);
-        
+    }
+    useEffect(()=>{
+
+        window.addEventListener("scroll",changeColor, true);
+        return ()=>window.removeEventListener('scroll',changeColor)
     },[])
 
     return (
@@ -28,16 +29,14 @@ export default function NavBar() {
             coding.Studio();
         </div>    
         <div  className='nav-links'>
-        <a style={{
-            color:`${color}`
-        }} href="#landingPage">Home</a>
-        <a style={{
-            color:`${color}`
-        }} href="#dates">Event details</a>
-        
-        <a style={{
-            color:`${color}`
-        }} href="#codeCraft" >About codeCraft</a>
+      
+        <a  href="#landingPage">Home</a>
+ 
+      
+        <a  href="#dates">Event details</a>
+       
+        <a  href="#codeCraft" >About codeCraft</a>
+        <a href="#cs" >About coding.Studio();</a>
         
         </div>
         
