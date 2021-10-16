@@ -73,14 +73,14 @@
 @media screen and (max-width:600px) {
     .date-page{
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1rem;
         place-content: center;
         padding-bottom: 0;
         justify-items: center;
         
     }
     .date{
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
     }
     .space5{
         height: 0;

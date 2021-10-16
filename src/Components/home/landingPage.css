@@ -11,9 +11,11 @@
 .title {
   display: block;
   color: white;
-  font-size: min(4rem,15vw);
+  font-size: min(4rem,10vw);
   font-weight: bold;
-  font-family: "IBM Plex Mono";
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .subtitle {
   color: white;
@@ -22,7 +24,7 @@
   font-size: 1.5rem;
 }
 .caption{
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 .btn-reg {
   background: var(--secondary-color);
