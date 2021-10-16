@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react/cjs/react.development';
 import './navbar.css'
+import logo from '../../assets/logo.png'
+import wlogo from '../../assets/white_logo.png'
+
 export default function NavBar() {
 
     const [color,setColor] = useState('var(--txt-color)')
@@ -16,7 +19,7 @@ export default function NavBar() {
     
     useEffect(()=>{
 
-        window.addEventListener("scroll",changeColor, true);
+        window.addEventListener("scroll",changeColor);
         return ()=>window.removeEventListener('scroll',changeColor)
     },[])
 
@@ -26,8 +29,11 @@ export default function NavBar() {
             color:`${color}`
         }}
         >
-        <div className="logo">
-            coding.Studio();
+        <div onClick={()=>{
+             window.open('https://codingstudio.club/', '_blank').focus();
+
+        }} className="logo">
+            <img alt='logo' src={color==='black'?logo:wlogo} ></img>
         </div>    
         <div  className='nav-links'>
       
@@ -37,7 +43,6 @@ export default function NavBar() {
         <a  href="#dates">Event details</a>
        
         <a  href="#codeCraft" >About codeCraft</a>
-        <a href="#cs" >About coding.Studio();</a>
         
         </div>
         

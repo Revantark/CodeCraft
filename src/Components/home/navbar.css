@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 .nav-bar{
     display: grid;
     position: fixed;
@@ -7,7 +7,8 @@
     backdrop-filter: blur(17px);
     color: var(--txt-color);
     z-index: 1;
-    font-size: 1.25rem;
+   
+    font-size: 1rem;
     font-weight: bold;
     padding-top: 1.325rem;
     padding-bottom: 1rem;
@@ -22,7 +23,16 @@
     grid-auto-flow: column;
     column-gap: 3rem;
     padding-right: 6rem;
+    font-family: 'Josefin Sans', sans-serif;
+        align-content: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     justify-self: end;
+}
+.logo img{
+    cursor: pointer;
+    width: 64px;
+    background-size: contain;
 }
 .nav-links a{
 
@@ -30,7 +40,11 @@
     text-decoration: none;
     cursor: pointer;
 }
-@media screen and (max-width:480px){
+.nav-links a:focus , a:hover{
+    text-decoration: underline var(--secondary-color);
+    text-underline-offset:4px;
+}
+@media screen and (max-width:700px){
     .nav-bar{
         grid-template-columns: 1fr;
         gap: 0.5rem;
@@ -42,9 +56,12 @@
         
     }
     .nav-links{
+        letter-spacing: normal;
+
         padding-right: 0;
-        font-size: 0.90rem;
+        font-size: 0.7rem;
         column-gap: 1.5rem;
+        
         justify-content: center;
         justify-items: center;
         row-gap: 0.5rem;
