@@ -7,7 +7,7 @@ export default function Dates() {
 
         <p className='dates-title' >Events this October</p>
         <section  className=' date-page' >
-            <div className="date0">
+            <div className="e-dates">
                 <p className='date'>
                     20                                  
                 </p>                
@@ -19,7 +19,7 @@ export default function Dates() {
 
             <div className="v-line"></div>
 
-            <div className="date1 ">
+            <div className="e-dates">
                 <p className='date' >
                     25 
                 </p>
@@ -31,7 +31,7 @@ export default function Dates() {
 
             <div className="v-line"></div>
 
-            <div className="date2">
+            <div className="e-dates">
                 <p className='date' >
                      26
                 </p>

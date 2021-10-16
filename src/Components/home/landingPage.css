@@ -31,10 +31,18 @@
   width: 22ch;
   padding: 12px;
   border: none;
+  cursor: pointer;
   justify-self: center;
   color: white;
   font-weight: bold;
   font-size: 1rem;
+  transition: 250ms transform;
+}
+.btn-reg:hover{
+  transform: scale(1.025);
+  box-shadow: 0px 0px 5px 5px rgba(255, 0, 0, 0.267),
+  0px 0px 2px 2px rgba(255, 0, 0, 0.100)
+  ;
 }
 .timer {
   color: white;
