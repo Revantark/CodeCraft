@@ -7,10 +7,7 @@ export default function NavBar() {
     
     useEffect(()=>{
 
-        window.addEventListener('hashchange',(e)=>{
-            console.log(window.location.hash);
-        })
-
+        
         window.addEventListener("scroll", _ => {
             
             const scroll = document.documentElement.scrollTop || document.body.scrollTop
