@@ -4,21 +4,19 @@ import './navbar.css'
 export default function NavBar() {
 
     const [color,setColor] = useState('var(--txt-color)')
-    
-    useEffect(()=>{
-
-        
-        window.addEventListener("scroll", _ => {
-            
-            const scroll = document.documentElement.scrollTop || document.body.scrollTop
+    const changeColor = ()=>{
+        const scroll = document.documentElement.scrollTop || document.body.scrollTop
             const es = document.getElementById('dates').scrollHeight-100
             const landingPageSh = document.getElementById('landingPage').scrollHeight + es +100
             if(scroll >= es && scroll <= landingPageSh){
                 setColor('black')
                 
             }else setColor('var(--txt-color)')
-        }, true);
-        
+    }
+    useEffect(()=>{
+
+        window.addEventListener("scroll",changeColor, true);
+        return ()=>window.removeEventListener('scroll',changeColor)
     },[])
 
     return (
