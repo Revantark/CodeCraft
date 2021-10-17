@@ -17,3 +17,19 @@
 * {
   /* border: 1px solid red; */
 }
+/* @media (-webkit-min-device-pixel-ratio: 1.25) { 
+  .nav-bar *{
+    font-size: 0.7rem;
+    
+  }
+  .logo img{
+    width: 40px !important;
+    height: 40px !important;
+   
+  }
+  .landing-page * {
+    font-size: 0.6rem;
+  }
+  
+ } */
+ 

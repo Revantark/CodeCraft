@@ -4,10 +4,12 @@ import {ReactComponent as DownArrow} from '../../assets/down.svg'
 import { useHistory } from 'react-router'
 export default function LandingPage() {
     const history = useHistory()
-
+    const extheight  = document.getElementById('nav-bar').scrollHeight
     return (
         <div id='landingPage' className="lp_root fullscreen">
-
+                <div style={{
+                    height:`${extheight+16}px`
+                }}></div>
                 <div className='caption' >
 
                 <span className='title' >CodeCraft</span>

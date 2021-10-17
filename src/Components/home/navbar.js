@@ -9,6 +9,7 @@ export default function NavBar() {
     const [color,setColor] = useState('var(--txt-color)')
     const changeColor = ()=>{
         const scroll = document.documentElement.scrollTop || document.body.scrollTop
+        
             const es = document.getElementById('dates').scrollHeight-100
             const landingPageSh = document.getElementById('landingPage').scrollHeight + es +100
             if(scroll >= es && scroll <= landingPageSh){
@@ -24,9 +25,10 @@ export default function NavBar() {
     },[])
 
     return (
-        <div className='nav-bar'
+        <div id='nav-bar' className='nav-bar'
         style={{
             color:`${color}`,
+            
             boxShadow:`0 2px 1px 1px hsla(0, 0%, 0%,0.2)`
         }}
         >
