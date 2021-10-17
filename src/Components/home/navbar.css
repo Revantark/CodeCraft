@@ -4,15 +4,15 @@
     position: fixed;
     grid-template-columns: 1fr 1fr;
     width: 100vw;
-    backdrop-filter: blur(17px);
+    backdrop-filter: blur(15px);
     /* background-color: transparent; */
     color: var(--txt-color);
     z-index: 1;
    
     font-size: 1rem;
     font-weight: bold;
-    padding-top: 1.325rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 .logo{
     justify-self: start;
