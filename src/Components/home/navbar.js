@@ -26,7 +26,8 @@ export default function NavBar() {
     return (
         <div className='nav-bar'
         style={{
-            color:`${color}`
+            color:`${color}`,
+            boxShadow:`0 2px 1px 1px hsla(0, 0%, 0%,0.2)`
         }}
         >
         <div onClick={()=>{
