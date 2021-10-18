@@ -112,16 +112,16 @@ function RegisterForm({member,setMember,no, errorObj,seterrorObj}) {
             />
             <select value={member.branch}
                 onChange={(e) =>handleBranch(e.target.value)}>
-                <option value="CSE">CSE</option>
-                <option value="ECE">ECE</option>
-                <option value="IT">IT</option>
-                <option value="EEE">EEE</option>
-                <option value="CIVIL">CIV</option>
-                <option value="MECH">MECH</option>
-                <option value="CSM">CSM</option>
-                <option value="CSB">CSB</option>        
-                <option value="CSC">CSC</option>   
-                <option value="CSD">CSD</option>               
+                <option className="optionClass" value="CSE">CSE</option>
+                <option className="optionClass" value="ECE">ECE</option>
+                <option className="optionClass" value="IT">IT</option>
+                <option className="optionClass" value="EEE">EEE</option>
+                <option className="optionClass" value="CIVIL">CIV</option>
+                <option className="optionClass" value="MECH">MECH</option>
+                <option className="optionClass" value="CSM">CSM</option>
+                <option className="optionClass" value="CSB">CSB</option>        
+                <option className="optionClass" value="CSC">CSC</option>   
+                <option className="optionClass" value="CSD">CSD</option>               
             </select> 
         </div>
     )

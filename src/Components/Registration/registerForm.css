@@ -1,15 +1,21 @@
 select{
-    background-color:#000020;
+    background-color:#131326;
     color: #edeeff;
-    border:0.2px solid whitesmoke;
+    border:none;
     outline: none;    
     border-radius: 5px;
-    padding: 5px 20px;
+    padding: 5px 28px;
+    padding-left: 10px;
     text-align: left;
     font-size: large;
 }
-option:hover{
-    background:red;
+
+.optionClass{
+    margin: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    outline-color: indianred;
 }
 
 .membertitle{
