@@ -1,17 +1,38 @@
-import React, { useEffect, useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import './landingPage.css'
 import {ReactComponent as DownArrow} from '../../assets/down.svg'
-import { useHistory } from 'react-router'
-export default function LandingPage() {
-    const history = useHistory()
+import {ReactComponent as CClogo} from '../../assets/cclogo.svg'
 
+import { useHistory } from 'react-router'
+import { useEffect } from 'react/cjs/react.development'
+export default function LandingPage() {
+
+    const history = useHistory()
+    const [height,setHeight] = useState(0)
+
+    useLayoutEffect(()=>{
+        setHeight(document.getElementById('nav-bar').scrollHeight)
+    },[])
     return (
         <div id='landingPage' className="lp_root fullscreen">
-
+            {
+                
+            }
+                <div style={{
+                    height:`${height}px`
+                }}></div>
+            
                 <div className='caption' >
 
-                <span className='title' >CodeCraft</span>
-                <span className="subtitle">Something here idk</span>
+                <span className='title' >CodeCraft 3.0</span>
+                <span className="subtitle">Something here idk</span> 
+                <div className="cchef">
+                <span>Powered by </span>
+                <div>
+                <CClogo/>
+                </div>
+
+                </div>
                 </div>
                 <Timer/>
                 <button onClick={()=>history.replace('register')} className='btn-reg'>
@@ -55,7 +76,9 @@ const Timer = ()=>{
     
     return (
     <>
-    <span>Registration closes in</span>
+    <span style={{
+        fontSize:'1.25rem'
+    }} >Registration closes in</span>
         <div className="timer" >
 
             <div className='timer-b timer' >

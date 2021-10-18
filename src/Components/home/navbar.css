@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 .nav-bar{
     display: grid;
-    position: fixed;
     grid-template-columns: 1fr 1fr;
     width: 100vw;
-    backdrop-filter: blur(17px);
+    position: fixed;
+    backdrop-filter: blur(15px);
     /* background-color: transparent; */
     color: var(--txt-color);
     z-index: 1;
-   
+    top: 0;
     font-size: 1rem;
     font-weight: bold;
-    padding-top: 1.325rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 .logo{
     justify-self: start;
@@ -33,6 +33,7 @@
 .logo img{
     cursor: pointer;
     width: 64px;
+    height: 64px;
     background-size: contain;
 }
 .nav-links a{

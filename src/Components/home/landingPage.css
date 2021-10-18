@@ -4,14 +4,14 @@
   background: var(--primary-color);
   display: grid;
   position: relative;
-  place-content: center;
+  align-content: center;
   justify-items: center;
 }
 
 .title {
   display: block;
   color: white;
-  font-size: min(4rem,10vw);
+  font-size: min(4rem,8vw);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 8px;
@@ -25,6 +25,21 @@
 }
 .caption{
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.cchef{
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  
+  gap: 1vw;
+  place-content: center;
+}
+.cchef div{
+  transform: scale(0.7);
+  width: min-content;
 }
 .btn-reg {
   background: var(--secondary-color);

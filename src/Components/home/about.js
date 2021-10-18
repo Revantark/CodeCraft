@@ -4,7 +4,7 @@ export default function About() {
     return (
         <div id="codeCraft" className="fullscreen about">            
             <span className="about-title" >
-                About Me
+                About codeCraft
             </span>
             <div className="underline">
                 
