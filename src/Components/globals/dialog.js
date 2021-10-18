@@ -5,20 +5,29 @@ function Dialog({message,setstatus,onOK}) {
     return (
         <div className="overlay">
             <div className="overlay-content">  
-                <p style={{fontSize:'30px'}}>
+                <p style={{fontSize:'25px'}}>
                    {
-                       message
+                       message.status
                    }
-                </p>  
-                     
-                {/* Buttons Performing Operations */}
-                <span className="btn-container">
-                    <button className="btn" onClick={function() {
-                        setstatus(null)
-                        onOK()
+                </p> 
+
+                <div>
+                    <p style={{fontSize:'15px'}}>
+                    {
+                        message.desc
+                    }
+                    </p>  
                         
-                    }}>OK</button>
-                </span>
+                    {/* Buttons Performing Operations */}
+                    <span className="btn-container">
+                        <button className="btn" onClick={function() {
+                            setstatus(null)
+                            onOK()
+                            
+                        }}>HOME</button>
+                    </span>
+                </div>
+                
             </div>              
         </div>
     );

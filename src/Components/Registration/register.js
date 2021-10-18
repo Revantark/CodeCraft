@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './register.css'
 import RegisterForm from './registerForm';
+import Logo  from '../../assets/white_logo.png'
 import { validateName,validateEmail,validatePhNumber,validateCodeChefID, validateRollNumber} from './validations'
 
 import {register} from '../../firebase/firebase'
@@ -9,7 +10,6 @@ import {useHistory} from 'react-router-dom';
 
 function Register() {
   const history=useHistory();
-  const [teamName, setTeamName] = useState();
   const [member1, setMember1] = useState({
     name:"",
     email:"",
@@ -44,7 +44,7 @@ function Register() {
     codechefIDError:""
   }) 
   
-  const [status, setstatus] = useState(null);
+  const [status, setstatus] = useState({status:null,desc:null});
 
   async function submitForm() {
     seterrorObj1((m)=>{
@@ -74,17 +74,22 @@ function Register() {
     if(flag && flag1){ 
       console.log(!flag)
       console.log(!flag1)
-      var status= await register({
+      var register_status= await register({
         member1:member1,
         member2:member2
       })
-      if(status===true){
-        console.log("Register Successful");
-        setstatus("Register Successful");
+      if(register_status===true){
+        setstatus({
+          status:"Registration Successful",
+          desc:"You have successfully registered for codeCraft 3.0, further details will be mailed to your registered mail ids"
+        });
       }
       else{
-        console.log("Register Unsuccessful");
-        setstatus("Register Unsuccessful")
+        setstatus({
+          status:"Registration Failed",
+          desc:'Please try again later'
+
+        })
       }
     }
     else{
@@ -95,15 +100,16 @@ function Register() {
     return (
       <div className="page"  >
         <nav>
+          <img src={Logo} height="50" alt="logo"></img>
           <ul style={{listStyle:'none'}}>
-          <li className="registerTitle" onClick={()=>history.replace('/')}>HOME</li>
-          <li className="verticalLine"></li>
-          <li className="registerTitle" onClick={()=>history.replace('/register')}>REGISTER</li>
+            <li className="registerTitle" onClick={()=>history.replace('/')}>HOME</li>
+            <li className="verticalLine"></li>
+            <li className="registerTitle" onClick={()=>history.replace('/register')}>REGISTER</li>
           </ul>
         </nav>
 
         {
-          status && <Dialog message={status} setstatus={setstatus} 
+          (status.status && status.desc) && <Dialog message={status} setstatus={setstatus} 
           onOK={function(){
             setstatus(null);
             history.replace('/')
@@ -112,9 +118,12 @@ function Register() {
         
         <div className="register">
             <div className="instructions">
-              <ul style={{color:'#ffd000',listStyle:'inside' }}>
-                <li style={{marginBottom:'10px',}}>register only if both of you did not register </li>
-                <li>create your codechef account prior to registration</li>
+              <ul style={{color:'whitesmoke',listStyle:'inside',textAlign:'left' }}>
+                <li style={{marginBottom:'10px',}}>
+                Before registering to codeCraft, please sign up on CodeChef if you haven't already. To sign up, click 
+                <a href="https://www.codechef.com/signup" rel="noreferrer" target="_blank" className="ref">here</a>  
+                </li>
+                <li>One member can only register once with their teammate. No two teams can have the same member.</li>
               </ul>
             </div>
 

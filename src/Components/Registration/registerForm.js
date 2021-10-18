@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import InputField from '../globals/input'
 import './registerForm.css'
 import { validateName,validateEmail,validatePhNumber,validateCodeChefID, validateRollNumber} from './validations'
