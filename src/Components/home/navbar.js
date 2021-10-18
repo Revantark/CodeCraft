@@ -5,7 +5,6 @@ import logo from '../../assets/logo.png'
 import wlogo from '../../assets/white_logo.png'
 
 export default function NavBar() {
-
     const [color,setColor] = useState('var(--txt-color)')
     const changeColor = ()=>{
         const scroll = document.documentElement.scrollTop || document.body.scrollTop
