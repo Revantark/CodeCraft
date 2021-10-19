@@ -39,12 +39,9 @@ export default function NavBar() {
         </div>    
         <div  className='nav-links'>
       
-        <a  href="#landingPage">Home</a>
- 
-      
-        <a  href="#dates">Event details</a>
-       
-        <a  href="#codeCraft" >About codeCraft</a>
+            <a  href="#landingPage">Home</a>
+            <a  href="#dates">Event details</a>       
+            <a  href="#codeCraft" >About codeCraft</a>
         
         </div>
         
