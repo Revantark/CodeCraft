@@ -42,10 +42,10 @@ export default function Footer(){
                     <div className="border1"></div>
                     <ul className="list">
                         <a href="https://www.instagram.com/coding.studio/" target="_blank" rel="noreferrer"> 
-                        <li><i className="fab fa-instagram"></i><a href="/home">Instagram</a></li>
+                        <li><i className="fab fa-instagram"></i>Instagram</li>
                         </a>
                         <a href="https://discord.gg/8CwuPh3Nbv" target="_blank" rel="noreferrer"> 
-                        <li><i class="fab fa-discord"></i><a href="/home">Discord</a></li>
+                        <li><i class="fab fa-discord"></i>Discord</li>
                         </a>
                     </ul>
                 </div>

@@ -64,9 +64,6 @@ export const validateCodeChefID = (codechefid) => {
     if (codechefid === "") {
         return "name cannot be empty";
     } 
-    else if (!/^[a-zA-Z .]*$/.test(codechefid)) {
-        return "name must contain only alphabets";
-    } 
     else if (codechefid.length < 3) {
         return "name must be atleast 3 characters!";
     } 
