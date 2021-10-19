@@ -1,10 +1,9 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useLayoutEffect,useEffect, useState } from 'react'
 import './landingPage.css'
 import {ReactComponent as DownArrow} from '../../assets/down.svg'
 import {ReactComponent as CClogo} from '../../assets/cclogo.svg'
 
 import { useHistory } from 'react-router'
-import { useEffect } from 'react/cjs/react.development'
 export default function LandingPage() {
 
     const history = useHistory()
@@ -28,9 +27,9 @@ export default function LandingPage() {
                 <span className="subtitle">Something here idk</span> 
                 <div className="cchef">
                 <span>Powered by </span>
-                <div>
+                
                 <CClogo/>
-                </div>
+                
 
                 </div>
                 </div>
@@ -48,9 +47,9 @@ export default function LandingPage() {
     )
 }
 
-const Timer = ()=>{
+ const Timer = ()=>{
     const [time,setTime] = useState(['00','00','00','00'])
-    const countDownDate = new Date("Oct 19, 2021 00:00:00").getTime();
+    const countDownDate = new Date("Oct 24, 2021 00:00:00").getTime();
     
     useEffect(()=>{
         const x = setInterval(function() {
@@ -77,7 +76,8 @@ const Timer = ()=>{
     return (
     <>
     <span style={{
-        fontSize:'1.25rem'
+        fontSize:'1.25rem',
+        textAlign:'center'
     }} >Registration closes in</span>
         <div className="timer" >
 
