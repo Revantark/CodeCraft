@@ -12,6 +12,7 @@
   justify-content: space-around;
   gap: min(6rem, 7vw);
 }
+
 .dates-title {
   text-align: center;
   margin: 0;

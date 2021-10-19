@@ -78,7 +78,7 @@ function Register() {
         member1:member1,
         member2:member2
       })
-      if(register_status===true){
+      if(register_status.status===true){
         setstatus({
           status:"Registration Successful",
           desc:"You have successfully registered for codeCraft 3.0, further details will be mailed to your registered mail ids"
@@ -87,7 +87,7 @@ function Register() {
       else{
         setstatus({
           status:"Registration Failed",
-          desc:'Please try again later'
+          desc:register_status.desc
 
         })
       }
@@ -111,7 +111,7 @@ function Register() {
         {
           (status.status && status.desc) && <Dialog message={status} setstatus={setstatus} 
           onOK={function(){
-            setstatus(null);
+            setstatus({status:null,desc:null});
             history.replace('/')
           }} />
         }

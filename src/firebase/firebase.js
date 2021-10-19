@@ -1,12 +1,15 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { collection, addDoc } from "firebase/firestore"; 
-import { getFirestore } from "firebase/firestore"
+import { getFirestore } from "firebase/firestore";
+import { query, getDocs } from "firebase/firestore";
+
 
 
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+
 
 const firebaseConfig = {
   apiKey:process.env.APIKey,
@@ -25,14 +28,39 @@ const db = getFirestore();
 
 
 async function register(team){
-  try {
-    const docRef = await addDoc(collection(db,"registrations"), team);
-    console.log("Document written with ID: ", docRef.id);
-    return true; 
-  } catch (e) {
-    console.error("Error adding document: ", e);
-    return false
+  let checkMails=true
+
+  const q = query(collection(db, "registrations"));
+
+  try{
+    const querySnapshot = await getDocs(q); 
+    if(querySnapshot.size>0){
+      querySnapshot.forEach((doc) => {
+        if(team.member1.email === doc.data().member1.email || 
+          team.member1.email === doc.data().member2.email ||
+          team.member2.email === doc.data().member1.email ||
+          team.member2.email === doc.data().member2.email){
+            checkMails=false
+          }
+      });
+    }   
   }
+  catch(e){
+    return {status:false,desc:'Unknown Error Occured'};
+  }   
+
+  if(checkMails){
+    try {
+      const docRef = await addDoc(collection(db,"registrations"), team);
+      return {status:true,desc:'Registration Successful'}; 
+    } catch (e) {
+      return {status:false,desc:'Registration Failed'};
+    }
+  }
+  else{
+    return {status:false,desc:'Mail ID already registered'};
+  }  
+
 }
 
 export  {
