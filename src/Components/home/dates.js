@@ -7,25 +7,14 @@ export default function Dates() {
 
         <p className='dates-title' >Events this October</p>
         <section  className=' date-page' >
-            <div className="e-dates">
-                <p className='date'>
-                    20                                  
-                </p>                
-                <div className="dateCard">
-                <p>Introduction to CP</p>
-                <p>CP Talk </p>
-                </div>                
-            </div>
-
-            <div className="v-line"></div>
 
             <div className="e-dates">
                 <p className='date' >
                     25 
                 </p>
                 <div className='dateCard' >
-                <p>Introduction to codeCraft</p>
-                <p>Basic Programming challenges</p>
+                    <p>Introduction to Competitive Programming</p>
+                    <p>Mock Contest</p>
                 </div>                
             </div>
 
@@ -36,7 +25,7 @@ export default function Dates() {
                      26
                 </p>
                 <div className="dateCard">
-                <p>codeCraft 3.0 contest</p>
+                <p>codeCraft 3.0</p>
                 <p>Results announcement</p>
                 </div>
             </div>           
