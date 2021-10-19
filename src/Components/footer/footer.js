@@ -1,5 +1,6 @@
 import './footer.css'
 import React from 'react'
+import Logo from '../../assets/white_logo.png'
 
 export default function Footer(){
     
@@ -8,7 +9,7 @@ export default function Footer(){
             <div className="inner-footer">
                 <div className="footer-items">
                     <h1>coding.Studio();</h1>
-                    <i className="fas fa-code"></i>
+                    <img src={Logo} alt="logo" height="40"></img>
                     <p>Programming Club - VBIT</p>
                     
                 </div>

@@ -23,8 +23,7 @@ export default function LandingPage() {
             
                 <div className='caption' >
 
-                <span className='title' >CodeCraft
-                <span style={{color:'blue'}}> 3.0</span> </span>
+                <span className='title' >CodeCraft 3.0</span>
                 {/* <span className="subtitle">Something here idk</span>  */}
                 <div className="cchef">
                 <span>Powered by </span>

@@ -26,7 +26,7 @@
     width: 60vw;
     text-align: left;
     font-style: italic;
-    font-size: min(1.5rem,5vw);
+    font-size: min(1.4rem,4vw);
     color: var(--txt-color);
 }
 
