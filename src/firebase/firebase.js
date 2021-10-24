@@ -12,15 +12,14 @@ import { query, getDocs } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey:process.env.APIKey,
+  apiKey:process.env.REACT_APP_APIKey,
   authDomain: "codecraft-cs.firebaseapp.com",
   projectId: "codecraft-cs",
   storageBucket: "codecraft-cs.appspot.com",
-  messagingSenderId: process.env.MessagingID,
-  appId: process.env.AppID,
-  measurementId: process.env.MeasurementID
+  messagingSenderId: process.env.REACT_APP_MessagingID,
+  appId: process.env.REACT_APP_AppID,
+  measurementId: process.env.REACT_APP_MeasurementID
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
@@ -65,6 +64,7 @@ async function register(team){
 
 export  {
   app,
+  db,
   register
 };
 
