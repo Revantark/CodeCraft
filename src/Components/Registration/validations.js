@@ -45,20 +45,20 @@ export const validateEmail=(email,temp)=>{
 
 export const validateRollNumber=(rn)=>{
     var rollNumber = rn.toUpperCase();
-    // let rollRegex = new RegExp(/^(18|19|20|21)P61A(01|02|03|04|05|12)[(a-z)|(0-9)][0-9]$/i);
+    let rollRegex = new RegExp(/^(18|19|20|21)(p6|p5)(01|02|03|04|05|12|56|62|66|67|69|70)[(a-z)|(0-9)][0-9]$/i);
     if(rollNumber.length===0){
         return "roll number cannot be empty";
     }
     else if(rollNumber.length<10){
         return "roll number cannot be less than 10 characters";
     }
-    else if(rollNumber.length>10){
-        return "roll number cannot exceed 10 characters";
-    }
+    // else if(rollNumber.length>10){
+    //     return "roll number cannot exceed 10 characters";
+    // }
 
-    // else if(!rollRegex.test(rollNumber)){
-    //     return "roll number invalid";  
-    // } 
+    else if(!rollRegex.test(rollNumber)){
+        return "roll number invalid";  
+    } 
     else{
         return null;
     }   
