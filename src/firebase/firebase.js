@@ -50,7 +50,7 @@ async function register(team){
 
   if(checkMails){
     try {
-      const docRef = await addDoc(collection(db,"registrations"), team);
+      await addDoc(collection(db,"registrations"), team);
       return {status:true,desc:'Registration Successful'}; 
     } catch (e) {
       return {status:false,desc:'Registration Failed'};

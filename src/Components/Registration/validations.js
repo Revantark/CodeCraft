@@ -30,7 +30,7 @@ export const validatePhNumber = (phoneNumber) => {
 }
 
 export const validateEmail=(email,temp)=>{
-    const regE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const regE = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
     if (email.length ===0) {
         return "email cannot be empty";
